@@ -27,7 +27,7 @@ let lastResult = null;
             formData.append("file", input.files[0]);
 
             try {
-                let response = await fetch("http://127.0.0.1:8000/analizar/", {
+                let response = await fetch("$https://prevencioninyeccionessql.onrender.com/analizar/", {
                     method: 'POST',
                     body: formData
                 });
@@ -128,7 +128,7 @@ let lastResult = null;
         ShowLoading();
     
         try {
-            let response = await fetch(`http://127.0.0.1:8000/Obtener_Recomendaciones/?tipo=${Zip}`, { // ✅ Use backticks
+            let response = await fetch(`$https://prevencioninyeccionessql.onrender.com/Obtener_Recomendaciones/?tipo=${Zip}`, { // ✅ Use backticks
                 method: 'GET'
             });
     
