@@ -1,5 +1,7 @@
 let lastResult = null;
 
+const API_URL = "https://prevencioninyeccionessql.onrender.com";
+
         function ShowLoading() {
             document.getElementById("loading").style.display = "flex";
         }
