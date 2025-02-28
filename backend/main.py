@@ -30,12 +30,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-def home():
-    return {"message": "API de detección de vulnerabilidades en código fuente"}
+#@app.get("/")
+#def home():
+ #   return {"message": "API de detección de vulnerabilidades en código fuente"}
 
 
 @app.post("/analizar/")
+def home():
 async def predict(file: UploadFile = File(...)):
 
     try:
