@@ -29,7 +29,7 @@ const API_URL = "https://prevencioninyeccionessql.onrender.com";
             formData.append("file", input.files[0]);
 
             try {
-                let response = await fetch('${API_URL}/analizar/', {
+                let response = await fetch('https://prevencioninyeccionessql.onrender.com/analizar/', {
                     method: 'POST',
                     body: formData
                 });
@@ -130,7 +130,7 @@ const API_URL = "https://prevencioninyeccionessql.onrender.com";
         ShowLoading();
     
         try {
-            let response = await fetch('${API_URL}/Obtener_Recomendaciones/?tipo=${Zip}', { // ✅ Use backticks
+            let response = await fetch('https://prevencioninyeccionessql.onrender.com/Obtener_Recomendaciones/?tipo=${Zip}', {
                 method: 'GET'
             });
     
