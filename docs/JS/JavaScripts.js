@@ -29,7 +29,7 @@ const API_URL = "https://prevencioninyeccionessql.onrender.com";
             formData.append("file", input.files[0]);
 
             try {
-                let response = await fetch('https://prevencioninyeccionessql.onrender.com/analizar/', {
+                let response = await fetch(`${API_URL}/analizar/`, {
                     method: 'POST',
                     body: formData
                 });
@@ -130,7 +130,7 @@ const API_URL = "https://prevencioninyeccionessql.onrender.com";
         ShowLoading();
     
         try {
-            let response = await fetch('https://prevencioninyeccionessql.onrender.com/Obtener_Recomendaciones/?tipo=${Zip}', {
+            let response = await fetch(`${API_URL}/Obtener_Recomendaciones/?tipo=${Zip}`, {
                 method: 'GET'
             });
     
@@ -154,7 +154,7 @@ const API_URL = "https://prevencioninyeccionessql.onrender.com";
     
         } catch (error) {
             console.error("Error:", error);
-            alert("Error descargando el archivo: " + error.message); // ✅ Show alert instead of setting `resultado.textContent`
+            alert("Error descargando el archivo: " + error.message);
             HideLoading();
         }
     }
